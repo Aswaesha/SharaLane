@@ -48,6 +48,7 @@ public class SingUpTest {
         driver.quit();
     }
 
+
     @Test
     public void zipCodeShouldAccept4Digits() {
         // Открытие страницы https://www.sharelane.com/cgi-bin/register.py
@@ -69,6 +70,7 @@ public class SingUpTest {
         driver.quit();
 
     }
+
 
     @Test
     public void successfulSingUp() {
