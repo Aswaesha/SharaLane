@@ -164,7 +164,7 @@ public class SingUpTest {
     }
 
     @Test
-    public void successfulSingUpUnValidEmail() {
+    public void unSuccessfulSingUpUnValidEmail() {
         // Открытие страницы https://www.sharelane.com/cgi-bin/register.py
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -276,7 +276,7 @@ public class SingUpTest {
         zipCodeInputPassword.sendKeys("q1w2e3r4t5y6u7i8");
 
         // Убедиться что выбило
-        boolean isDisplayed = driver.findElement(By.name("password")).isDisplayed();
+        boolean isDisplayed = driver.findElement(By.cssSelector("[type = password]")).isDisplayed();
         Assert.assertTrue(isDisplayed);
 
         // Закрыть браузер
